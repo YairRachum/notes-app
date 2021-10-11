@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Pattaya&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/datepicker.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Notes App</title>
+  </head>
+
+  <body>
+    <div class="form-wrapper">
+      <div class="form-inputs">
+        <h1>My note board</h1>
+
+        <input type="text" id="title" placeholder="Title" />
+        <div id="title-error" class="error"></div>
+
+        <textarea class="textarea" id="note" placeholder="Enter a note..."></textarea>
+        <div id="note-error" class="error"></div>
+
+        <div class="dateAndTime">
+          <div class="date-div">
+            <input type="text" onkeydown="return false" id="datepicker" placeholder="Date" />
+            <div id="datepicker-error" class="error"></div>
+          </div>
+
+          <div class="time-div">
+            <input type="time" id="time" />
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button class="add-btn" onclick="onClickAdd()">
+            <i class="fas fa-plus"></i>
+          </button>
+          <button class="reset-btn" onclick="onClickReset()">
+            <i id="reset" class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="containerDiv"></div>
+    <script src="JavaScript/app.js"></script>
+  </body>
+</html>

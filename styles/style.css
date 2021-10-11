@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+#containerDiv {
+  width: 98%;
+  margin-top: 85px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+body {
+  background: white;
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+h1 {
+  color: white;
+  font-family: "Pattaya", sans-serif;
+  font-size: 75px;
+  margin-bottom: 20px;
+  text-shadow: 0 15px 35px rgb(7 7 12 / 40%), 0 5px 15px rgb(0 0 0 / 29%);
+  -webkit-text-stroke: 0.3px grey;
+  letter-spacing: 3px;
+  text-decoration: underline solid rgb(172, 172, 172);
+}
+.note-card {
+  background: rgb(20, 124, 146);
+  border: 3px solid white;
+  margin: 40px 20px 20px 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 400px;
+  height: 370px;
+  padding: 20px;
+  box-shadow: 0 30px 35px rgb(7 7 12 / 51%), 0 5px 15px rgb(0 0 0 / 50%);
+}
+
+span {
+  font-weight: bold;
+  font-family: "Courgette", cursive;
+  font-size: 18px;
+  text-shadow: 0 15px 35px rgb(7 7 12 / 40%), 0 5px 15px rgb(0 0 0 / 29%);
+}
+.form-inputs {
+  margin-top: 25px;
+  background: rgb(255, 252, 243);
+  color: black;
+  box-shadow: 0 30px 35px rgb(7 7 12 / 51%), 0 5px 15px rgb(0 0 0 / 50%);
+  width: 750px;
+  height: 600px;
+  border-radius: 20px;
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid #659999;
+}
+.form-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.error {
+  background-color: red;
+  border-radius: 8px;
+  color: white;
+  width: 200px;
+  padding-left: 4px;
+}
+
+input {
+  margin-top: 10px;
+  margin-bottom: 3px;
+  padding: 15px;
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+  background-color: grey;
+  color: white;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:hover {
+  background-color: lightseagreen;
+  transition: 1s ease;
+}
+input::placeholder {
+  color: white;
+}
+input:hover::placeholder {
+  transition: 0.5s ease;
+  color: white;
+}
+
+button {
+  background: grey;
+  width: 150px;
+  padding: 5px;
+  border-radius: 8px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease;
+  font-size: 20px;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(104, 104, 104);
+  border-radius: 10px;
+}
+
+.deleteBtn {
+  background: none;
+  position: relative;
+  bottom: 18%;
+  left: 96%;
+  width: 25px;
+  height: 25px;
+  margin-top: 0;
+  font-size: 23px;
+  color: transparent;
+}
+
+.note-card:hover .deleteBtn {
+  color: white;
+}
+
+#trashCan:hover {
+  color: rgb(255, 87, 87);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.titleDiv {
+  background-color: white;
+  background-clip: border-box;
+  color: black;
+  padding: 5px;
+  border-radius: 8px;
+  margin-top: 5px;
+  position: relative;
+  bottom: 5%;
+  margin-bottom: 5px;
+  width: 330px;
+}
+
+.dateDiv {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  border-radius: 8px;
+  margin-top: 5px;
+  position: relative;
+  bottom: 13%;
+  margin-bottom: 5px;
+  width: 200px;
+}
+
+.noteDiv {
+  background: white;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  bottom: 14%;
+  height: 82%;
+  overflow-y: auto;
+  width: 100%;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.timeDiv {
+  background: white;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  width: 120px;
+  bottom: 24.5%;
+  left: 65%;
+  margin-top: 5px;
+}
+
+.textarea {
+  resize: none;
+  border: 2px solid lightgrey;
+  border-radius: 8px;
+  padding: 10px;
+  padding-top: 20px;
+  width: 80%;
+  line-height: 34px;
+  font-size: 22px;
+}
+.dateAndTime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
+  height: 20%;
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+.buttons {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin-top: 25px;
+}
+
+.reset-btn:hover {
+  background-color: rgb(255, 98, 98);
+}
+.add-btn:hover {
+  background-color: rgb(69, 179, 69);
+  transition: 0.5s cubic-bezier(0, 0, 0.6, 0.55);
+  color: white;
+}
+.add-btn {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: white;
+}
+.reset-btn {
+  font-size: 20px;
+  color: white;
+
+  margin-bottom: 10px;
+}
+#title {
+  padding: 8px;
+}
+
+input#datepicker {
+  cursor: pointer;
+}
+textarea {
+  margin-bottom: 2px;
+  margin-top: 2px;
+  background-image: url(../images/line.jpg);
+  height: 190px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 1920px) {
+  body {
+    background: white;
+    background-image: url(../images/background1920.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  #containerDiv {
+    margin-top: 30px;
+  }
+}
